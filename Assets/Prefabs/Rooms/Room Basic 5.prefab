@@ -2369,6 +2369,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 8620429874005478217}
   - {fileID: 8909000459199982774}
+  - {fileID: 429573582214802376}
+  - {fileID: 186033446443214766}
 --- !u!50 &1425340134801983372
 Rigidbody2D:
   serializedVersion: 4
@@ -2803,6 +2805,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 38232675913322238, guid: 315b7dbd66e6b410297ff49665c217f7, type: 3}
   m_PrefabInstance: {fileID: 149524809329846444}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &186033446443214766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 38232675913322242, guid: 315b7dbd66e6b410297ff49665c217f7, type: 3}
+  m_PrefabInstance: {fileID: 149524809329846444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &392361339331175626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2863,6 +2870,11 @@ PrefabInstance:
 --- !u!4 &429573582214801972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 38232675913322238, guid: 315b7dbd66e6b410297ff49665c217f7, type: 3}
+  m_PrefabInstance: {fileID: 392361339331175626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &429573582214802376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 38232675913322242, guid: 315b7dbd66e6b410297ff49665c217f7, type: 3}
   m_PrefabInstance: {fileID: 392361339331175626}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &478037159625049666
