@@ -55,7 +55,7 @@ public class PlayerHealthController : MonoBehaviour
                 UIController.instance.deathScreen.SetActive(true);
                 
             }
-
+            
             UIController.instance.healthSlider.value = currentHealth;
             UIController.instance.healthText.text = currentHealth.ToString() + " / " + maxHealth.ToString();
         }
