@@ -904,6 +904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadWaitTime: 2
+  sceneToLoad: 2
 --- !u!1 &854987927 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3069041615436975294, guid: a3ae34cada986480fb97c64e5c8d90a1, type: 3}
@@ -2206,6 +2207,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2280593564259401562, guid: 0c20f98b589b7475cac19224781f6cbc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3829414669427288641, guid: 0c20f98b589b7475cac19224781f6cbc, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3829414670061337651, guid: 0c20f98b589b7475cac19224781f6cbc, type: 3}

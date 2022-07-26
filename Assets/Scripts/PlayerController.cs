@@ -8,16 +8,19 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
 
     //shooting variables
-    public GameObject bullet;
+/*    public GameObject bullet;
     public Transform shootPoint;
-    public Transform gunArm;
     public float timeBetweenShots;
-    private float timeSinceShot;
+    private float timeSinceShot;*/
 
     //movement variables
     public float moveSpeed = 10f;
     Vector2 moveInput;
     Rigidbody2D rb;
+    public Transform gunArm;
+
+    public List<Gun> availableGuns = new List<Gun>();
+    private int activeGun;
 
     //dash variables
     private float activeMoveSpeed;
@@ -76,7 +79,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("isWalking", false);
             }
 
-            if (Input.GetMouseButtonDown(0))
+ /*           if (Input.GetMouseButtonDown(0))
             {
                 GameObject projectile = Instantiate(bullet, shootPoint.position, gunArm.rotation) as GameObject;
             }
@@ -89,6 +92,24 @@ public class PlayerController : MonoBehaviour
                 {
                     GameObject projectile2 = Instantiate(bullet, shootPoint.position, gunArm.rotation) as GameObject;
                     timeSinceShot = timeBetweenShots;
+                }
+            }*/
+
+            if(Input.GetKeyDown(KeyCode.Tab))
+            {
+                if(availableGuns.Count > 0)
+                {
+                    activeGun++;
+                    if(activeGun >= availableGuns.Count)
+                    {
+                        activeGun = 0;
+                    }
+
+                    SwitchGun();
+                }
+                else
+                {
+                    Debug.LogError("There is no guns to switch");
                 }
             }
 
@@ -131,5 +152,15 @@ public class PlayerController : MonoBehaviour
                 SceneManager.LoadScene(1);
             }
         }
+    }
+
+    public void SwitchGun()
+    {
+        foreach(Gun theGun in availableGuns)
+        {
+            theGun.gameObject.SetActive(false);
+        }
+
+        availableGuns[activeGun].gameObject.SetActive(true);
     }
 }
